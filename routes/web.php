@@ -33,18 +33,7 @@ Route::get('/about', function () {
     );
 });
 
-
-
-// Route::get('/blog', function () {
-
-
-//     return view('posts', [
-//         "title" => "post",
-//         "posts"=> Post::all()
-//     ]);
-// });
 Route::get('/posts', [PostController::class,'index']);
-
 
 // halaman singgle post
 Route::get('posts/{slug}', [PostController::class,'show']);
